@@ -1,0 +1,137 @@
+:root {
+    --bg-light: #f4f4f4;
+    --bg-dark: #1e1e1e;
+    --text-light: #111;
+    --text-dark: #fff;
+    --accent: #6c63ff;
+    --card-bg-light: #fff;
+    --card-bg-dark: #2c2c2c;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: 0.3s ease;
+  }
+  
+  .wrapper {
+    transition: 0.3s ease;
+  }
+  
+  header {
+    background-color: var(--accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    flex: 1;
+    margin: 10px;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .toggle-label {
+    background: white;
+    color: var(--accent);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .filters {
+    padding: 20px;
+    background-color: #eaeaea;
+  }
+  
+  .category-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .category-buttons button {
+    padding: 8px 16px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .store-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .game-card {
+    background-color: var(--card-bg-light);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+  }
+  
+  .game-card img {
+    width: 100%;
+    border-radius: 6px;
+  }
+  
+  .rating {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Dark Mode Styles */
+  #darkModeToggle:checked ~ .wrapper {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
+  #darkModeToggle:checked ~ .wrapper header,
+  #darkModeToggle:checked ~ .wrapper footer {
+    background-color: #333;
+  }
+  
+  #darkModeToggle:checked ~ .wrapper .filters {
+    background-color: #2a2a2a;
+  }
+  
+  #darkModeToggle:checked ~ .wrapper .game-card {
+    background-color: var(--card-bg-dark);
+  }
+  
+  #darkModeToggle:checked ~ .wrapper .category-buttons button {
+    background-color: #444;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #f2f2f2;
+  }
+  
+  

@@ -1,0 +1,137 @@
+:root {
+    --bg-light: #f7f7f7;
+    --bg-dark: #1b1b1b;
+    --text-light: #111;
+    --text-dark: #fff;
+    --accent: #ff3c6f;
+    --card-light: #fff;
+    --card-dark: #2c2c2c;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: 0.4s ease;
+  }
+  
+  header {
+    background-color: var(--accent);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .toggle-label {
+    background: white;
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .news-container {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+  }
+  
+  .news-card {
+    background: var(--card-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: slideIn 0.6s ease forwards;
+    opacity: 0;
+  }
+  
+  .news-card:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .news-card:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .news-card:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+  
+  .news-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .news-content {
+    padding: 20px;
+  }
+  
+  .news-content h3 {
+    margin-top: 0;
+  }
+  
+  .tag {
+    background: var(--accent);
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  /* Dark mode styles */
+  #darkModeToggle:checked ~ .wrapper {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
+  #darkModeToggle:checked ~ .wrapper header,
+  #darkModeToggle:checked ~ .wrapper footer {
+    background: #222;
+  }
+  
+  #darkModeToggle:checked ~ .wrapper .news-card {
+    background: var(--card-dark);
+  }
+  
+  /* Slide-in animation */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+  }
+  

@@ -1,0 +1,155 @@
+:root {
+    --bg-light: #ffffff;
+    --bg-dark: #1e1e1e;
+    --text-light: #000000;
+    --text-dark: #ffffff;
+    --accent: #6c63ff;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: all 0.3s ease;
+  }
+  
+  .dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--accent);
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: none;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  #toggle-mode {
+    padding: 6px 10px;
+    border: none;
+    background: white;
+    color: var(--accent);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .slide-up-text{
+    padding: 25px 0px;
+  }
+  
+  .features, .categories, .trending, .cta-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f4eeef;
+}
+
+.features h2, .categories h2, .trending h2, .cta-section h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.feature-cards, .category-grid, .trending-carousel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card, .cat, .trend-card {
+  padding: 20px 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  font-weight: bold;
+}
+
+.card:hover, .cat:hover, .trend-card:hover {
+  transform: translateY(-8px);
+  background: var(--accent);
+  color: white;
+}
+
+.trending-carousel {
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.trend-card {
+  min-width: 200px;
+  scroll-snap-align: start;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, var(--accent), #ff5f7c);
+  color: white;
+  padding: 60px 20px;
+}
+
+.hero .cta-btn {
+  background: white;
+  color: var(--accent);
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: 2px solid var(--accent);
+}
+
+.cta-section .cta-btn {
+  background: white;
+  color: var(--accent);
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+
+.footer {
+  padding: 20px;
+  background: #222;
+  color: #aaa;
+  text-align: center;
+}
+
+.footer .socials a {
+  margin: 0 10px;
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer .socials a:hover {
+  color: var(--accent);
+}

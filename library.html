@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Library</title>
+  <link rel="stylesheet" href="/css/library.css"/>
+</head>
+<body>
+<input type="checkbox" id="darkModeToggle" hidden/>
+<div class="wrapper">
+  <header>
+    <div class="logo">GameVerse</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="store.html">Store</a>
+      <a href="library.html">Library</a>
+      <a href="news.html">News</a>
+    </nav>
+    <label for="darkModeToggle" class="toggle-label">Toggle Mode</label>
+  </header>
+
+  <main class="library-section">
+    <h2>Your Game Library</h2>
+
+    <div class="filters">
+      <button class="filter active">All</button>
+      <button class="filter">Installed</button>
+      <button class="filter">Favorites</button>
+      <button class="filter">Recently Played</button>
+    </div>
+
+    <h3>Recently Played</h3>
+    <div class="recently-played">
+      <div class="recent-game">
+        <a href="game.html"><img src="/img and video source/genshinimpact.jpg" alt="GenshinImpact" height="170px"></a>
+      </div>
+      <div class="recent-game">
+        <img src="/img and video source/forzahorizon4.jpg" alt="Dragon Empire" height="170px">
+      </div>
+      <div class="recent-game">
+        <img src="/img and video source/thelastofus.jpg" alt="The Last of Us" height="170px">
+      </div>
+    </div>
+
+    <h3>All Games</h3>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="/img and video source/genshinimpact.jpg" alt="Cyber Quest">
+        <h3>Cyber Quest</h3>
+        <p class="status">Installed</p>
+        <button>Play</button>
+        
+      </div>
+      <div class="game-card">
+        <img src="/img and video source/tides.jpg" alt="Tides of Annihilation">
+        <h3>Tides of Annihilation</h3>
+        <p class="status not-installed">Not Installed</p>
+        <button>Install</button>
+      </div>
+      <div class="game-card">
+        <img src="/img and video source/blackmyth.jpg" alt="Black Myth Wukong">
+        <h3>BLACK MYTH WUKONG</h3>
+        <p class="status">Installed</p>
+        <button>Play</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GameVerse. All rights reserved.</p>
+  </footer>
+</div>
+</body>
+</html>

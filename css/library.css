@@ -1,0 +1,177 @@
+:root {
+    --bg-light: #f2f2f2;
+    --bg-dark: #1e1e1e;
+    --text-light: #111;
+    --text-dark: #fff;
+    --accent: #6c63ff;
+    --card-light: #fff;
+    --card-dark: #2a2a2a;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: 0.4s ease;
+  }
+  
+  header {
+    background-color: var(--accent);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .toggle-label {
+    background: white;
+    color: var(--accent);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .library-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .filters {
+    margin-bottom: 30px;
+  }
+  
+  .filter {
+    background: #eee;
+    border: none;
+    padding: 10px 16px;
+    margin: 0 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  
+  .filter:hover, .filter.active {
+    background: var(--accent);
+    color: white;
+  }
+  
+  .recently-played {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+  }
+  
+  .recent-game {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .recent-game:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+  }
+  
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .game-card {
+    background: var(--card-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .game-card img {
+    width: 100%;
+  }
+  
+  .game-card h3 {
+    margin: 15px 0 5px;
+  }
+  
+  .status {
+    font-size: 14px;
+    color: green;
+  }
+  
+  .status.not-installed {
+    color: red;
+  }
+  
+  .game-card button {
+    padding: 10px 20px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .game-card button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px var(--accent);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #fff;
+  }
+  
+  /* DARK MODE */
+  #darkModeToggle:checked ~ .wrapper {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
+  #darkModeToggle:checked ~ .wrapper header,
+  #darkModeToggle:checked ~ .wrapper footer {
+    background: #333;
+    color: white;
+  }
+  
+  #darkModeToggle:checked ~ .wrapper .filter {
+    background: #444;
+    color: white;
+  }
+  
+  #darkModeToggle:checked ~ .wrapper .filter.active,
+  #darkModeToggle:checked ~ .wrapper .filter:hover {
+    background: var(--accent);
+    color: white;
+  }
+  
+  #darkModeToggle:checked ~ .wrapper .game-card {
+    background: var(--card-dark);
+  }
+  
+  
